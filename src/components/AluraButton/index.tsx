@@ -8,18 +8,21 @@ interface IAluraButtonProps {
   className?: string
 }
 
-class AluraButton extends React.Component<IAluraButtonProps> {
-  render() {
-    return (
-      <button
-        onClick={this.props.onClick}
-        type={this.props.type}
-        className={`${style.botao} ${this.props.className}`}
-      >
-        {this.props.children}
-      </button>
-    )
-  }
+function AluraButton({
+  children,
+  className,
+  onClick,
+  type,
+}: IAluraButtonProps) {
+  return (
+    <button
+      onClick={onClick}
+      type={type}
+      className={`${style.botao} ${className}`}
+    >
+      {children}
+    </button>
+  )
 }
 
 export default AluraButton

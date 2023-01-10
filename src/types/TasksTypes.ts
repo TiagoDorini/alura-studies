@@ -4,5 +4,4 @@ export interface IAluraItem {
   duration: string
   completed: boolean
   selected: boolean
-  countingDown: boolean
 }
