@@ -1,7 +1,9 @@
 import { IAluraItem } from "../../../types/TasksTypes"
 import style from "../List.module.scss"
 
-interface IAluraItemProps extends IAluraItem {}
+interface IAluraItemProps extends IAluraItem {
+  selectTask: (selectedTask: IAluraItem) => void
+}
 
 function AluraItem({
   name,
@@ -9,9 +11,13 @@ function AluraItem({
   selected,
   completed,
   id,
+  selectTask,
 }: IAluraItemProps) {
   return (
-    <li className={style.item}>
+    <li
+      className={`${style.item} ${selected ? style.itemSelecionado : ""}`}
+      onClick={() => selectTask({ name, duration, selected, completed, id })}
+    >
       <h3 key={id}>{name}</h3>
       <span>{duration}</span>
     </li>
