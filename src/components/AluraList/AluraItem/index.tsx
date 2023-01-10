@@ -11,12 +11,15 @@ function AluraItem({
   selected,
   completed,
   id,
+  countingDown,
   selectTask,
 }: IAluraItemProps) {
   return (
     <li
       className={`${style.item} ${selected ? style.itemSelecionado : ""}`}
-      onClick={() => selectTask({ name, duration, selected, completed, id })}
+      onClick={() =>
+        selectTask({ name, duration, selected, completed, id, countingDown })
+      }
     >
       <h3 key={id}>{name}</h3>
       <span>{duration}</span>

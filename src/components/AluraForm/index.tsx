@@ -15,6 +15,7 @@ class AluraForm extends React.Component<IAluraFormProps> {
     completed: false,
     selected: false,
     id: "",
+    countingDown: false,
   }
 
   addTask(event: React.FormEvent<HTMLFormElement>) {

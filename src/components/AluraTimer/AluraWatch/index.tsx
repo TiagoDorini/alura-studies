@@ -1,12 +1,13 @@
+import { secondsToAluraTimerFormat } from "../../../common/utils/time"
 import style from "./Watch.module.scss"
 
 interface IAluraWatchProps {
-  duration?: string
+  duration?: number
 }
 
-export function AluraWatch({ duration = "0" }: IAluraWatchProps) {
-  console.log(duration)
-  const [minutes, seconds] = duration.split(":")
+export function AluraWatch({ duration = 0 }: IAluraWatchProps) {
+  const [minutes, seconds] = secondsToAluraTimerFormat(duration)
+
   return (
     <>
       <span className={style.relogioNumero}>{minutes[0]}</span>
