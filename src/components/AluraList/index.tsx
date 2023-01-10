@@ -1,22 +1,13 @@
-import React from "react"
 import AluraItem from "./AluraItem"
+import { IAluraItem } from "../../types/TasksTypes"
+
 import style from "./List.module.scss"
 
-function AluraList() {
-  const tasks = [
-    {
-      name: "React",
-      duration: "02:00:00",
-    },
-    {
-      name: "JavaScript",
-      duration: "01:00:00",
-    },
-    {
-      name: "TypeScript",
-      duration: "03:00:00",
-    },
-  ]
+interface IAluraListProps {
+  tasks: IAluraItem[]
+}
+
+function AluraList({ tasks }: IAluraListProps) {
   return (
     <aside className={style.listaTarefas}>
       <h2>Estudos do Dia</h2>

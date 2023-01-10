@@ -3,11 +3,16 @@ import style from "./Button.module.scss"
 
 interface IAluraButtonProps {
   children: React.ReactNode
+  type?: "button" | "submit" | "reset" | undefined
 }
 
 class AluraButton extends React.Component<IAluraButtonProps> {
   render() {
-    return <button className={style.botao}>{this.props.children}</button>
+    return (
+      <button type={this.props.type} className={style.botao}>
+        {this.props.children}
+      </button>
+    )
   }
 }
 
