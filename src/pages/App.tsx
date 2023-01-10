@@ -23,7 +23,7 @@ function App() {
     <div className={style.AppStyle}>
       <AluraForm setTasks={setTasks} />
       <AluraList tasks={tasks} selectTask={selectTask} />
-      <AluraTimer />
+      <AluraTimer selected={selected} />
     </div>
   )
 }

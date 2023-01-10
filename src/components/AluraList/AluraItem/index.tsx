@@ -1,5 +1,5 @@
 import { IAluraItem } from "../../../types/TasksTypes"
-import style from "../List.module.scss"
+import style from "./Item.module.scss"
 
 interface IAluraItemProps extends IAluraItem {
   selectTask: (selectedTask: IAluraItem) => void

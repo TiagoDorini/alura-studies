@@ -2,6 +2,7 @@ import AluraItem from "./AluraItem"
 import { IAluraItem } from "../../types/TasksTypes"
 
 import style from "./List.module.scss"
+import { hourToMinutes } from "../../common/utils/time"
 
 interface IAluraListProps {
   tasks: IAluraItem[]
