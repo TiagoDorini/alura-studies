@@ -33,12 +33,7 @@ export function AluraTimer({ selected }: IAluraTimerProps) {
       <div className={style.relogioWrapper}>
         <AluraWatch duration={duration} />
       </div>
-      <div>
-        <AluraButton onClick={() => countDown(duration)}>Start</AluraButton>
-        <AluraButton className={style.buttonCancelar} onClick={() => {}}>
-          Stop
-        </AluraButton>
-      </div>
+      <AluraButton onClick={() => countDown(duration)}>Start</AluraButton>
     </div>
   )
 }

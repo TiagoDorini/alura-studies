@@ -11,7 +11,7 @@ interface IAluraListProps {
 function AluraList({ tasks, selectTask }: IAluraListProps) {
   return (
     <aside className={style.listaTarefas}>
-      <h2>Estudos do Dia</h2>
+      <h2>Studies of the day</h2>
       <ul>
         {tasks.map((task, index) => (
           <AluraItem

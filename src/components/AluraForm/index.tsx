@@ -25,24 +25,24 @@ function AluraForm({ setTasks }: IAluraFormProps) {
   return (
     <form className={style.novaTarefa} onSubmit={addTask}>
       <div className={style.inputContainer}>
-        <label htmlFor="tarefa">Adicione um novo estudo</label>
+        <label htmlFor="task">Add a new study</label>
         <input
           type="text"
-          name="tarefa"
-          id="tarefa"
-          placeholder="o que vc quer estudar?"
+          name="task"
+          id="task"
+          placeholder="What do you want to study?"
           value={task}
           onChange={(event) => setTask(event.target.value)}
           required
         />
       </div>
       <div className={style.inputContainer}>
-        <label htmlFor="tempo">Tempo</label>
+        <label htmlFor="duration">Duration</label>
         <input
           type="time"
           step="1"
-          name="tempo"
-          id="tempo"
+          name="duration"
+          id="duration"
           min="00:00:00"
           max="01:30:00"
           value={duration}
@@ -50,7 +50,7 @@ function AluraForm({ setTasks }: IAluraFormProps) {
           required
         />
       </div>
-      <AluraButton type={"submit"}> Adicionar </AluraButton>
+      <AluraButton type={"submit"}> Add </AluraButton>
     </form>
   )
 }
