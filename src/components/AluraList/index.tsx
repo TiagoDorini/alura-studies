@@ -1,4 +1,5 @@
 import React from "react"
+import style from "./List.module.scss"
 
 function AluraList() {
   const tasks = [
@@ -16,11 +17,11 @@ function AluraList() {
     },
   ]
   return (
-    <aside>
+    <aside className={style.listaTarefas}>
       <h2>Estudos do Dia</h2>
       <ul>
         {tasks.map((task, index) => (
-          <li key={`${index}-${task.name}`}>
+          <li key={`${index}-${task.name}`} className={style.item}>
             <h3>{task.name}</h3>
             <span>{task.duration}</span>
           </li>

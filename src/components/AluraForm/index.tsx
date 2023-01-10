@@ -1,11 +1,12 @@
 import React from "react"
 import AluraButton from "../AluraButton"
+import style from "./Form.module.scss"
 
 class AluraForm extends React.Component {
   render() {
     return (
-      <form action="">
-        <div>
+      <form className={style.novaTarefa} action="">
+        <div className={style.inputContainer}>
           <label htmlFor="tarefa">Adicione um novo estudo</label>
           <input
             type="text"
@@ -15,7 +16,7 @@ class AluraForm extends React.Component {
             required
           />
         </div>
-        <div>
+        <div className={style.inputContainer}>
           <label htmlFor="tempo">Tempo</label>
           <input
             type="time"
