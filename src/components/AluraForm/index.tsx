@@ -28,7 +28,7 @@ class AluraForm extends React.Component {
             required
           />
         </div>
-        <AluraButton></AluraButton>
+        <AluraButton> Adicionar </AluraButton>
       </form>
     )
   }
